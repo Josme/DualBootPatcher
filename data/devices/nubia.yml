@@ -281,6 +281,38 @@
     brightness_path: /sys/class/backlight/panel/brightness
     pixel_format: RGBA_8888
     theme: portrait_hdpi
+name: Nubia Z17 mini
+  id: NX569
+  codenames:
+    - NX569J
+    - nx569j
+    - NX569H
+    - nx569h
+  architecture: arm64-v8a
+
+  block_devs:
+    base_dirs:
+      - /dev/block/bootdevice/by-name
+    system:
+      - /dev/block/bootdevice/by-name/system
+    cache:
+      - /dev/block/bootdevice/by-name/cache
+    data:
+      - /dev/block/bootdevice/by-name/userdata
+    boot:
+      - /dev/block/bootdevice/by-name/boot
+    recovery:
+      - /dev/block/bootdevice/by-name/recovery
+
+  boot_ui:
+    supported: true
+    flags:
+      - TW_QCOM_RTC_FIX
+    graphics_backends:
+      - fbdev
+    theme: portrait_hdpi
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    default_brightness: 240
 
 name: Nubia Z17
   id: NX563J
